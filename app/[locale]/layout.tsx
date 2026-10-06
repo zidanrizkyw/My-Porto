@@ -13,10 +13,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://my-porto-eight-mu.vercel.app";
 
   return {
-    ...(baseUrl && { metadataBase: new URL(baseUrl) }),
+    metadataBase: new URL(baseUrl),
     title: t("title"),
     description: t("description"),
     alternates: {
@@ -29,6 +30,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("title"),
       description: t("description"),
+      url: `${baseUrl}/${locale}`,
       siteName: "Zidan Rizky Wijaya",
       locale: locale === "id" ? "id_ID" : "en_US",
       type: "website",
