@@ -1,210 +1,45 @@
 @import "tailwindcss";
-@source "../app";
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
+  --color-heading: var(--heading);
   --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle: var(--subtle);
   --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-neon-pink: var(--neon-pink);
-  --color-neon-cyan: var(--neon-cyan);
-  --color-neon-soft: var(--neon-soft);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
 
-  --font-display: var(--font-press-start), system-ui, sans-serif;
-  --font-mono: var(--font-vt323), ui-monospace, monospace;
-  --font-sans: var(--font-vt323), system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.25rem;
-
-  --background: oklch(0.13 0.04 280);
-  --foreground: oklch(0.96 0.02 220);
-
-  --card: oklch(0.17 0.05 280 / 0.6);
-  --card-foreground: oklch(0.96 0.02 220);
-
-  --popover: oklch(0.17 0.05 280);
-  --popover-foreground: oklch(0.96 0.02 220);
-
-  --primary: oklch(0.68 0.27 5);
-  --primary-foreground: oklch(0.13 0.04 280);
-
-  --secondary: oklch(0.82 0.16 200);
-  --secondary-foreground: oklch(0.13 0.04 280);
-
-  --muted: oklch(0.22 0.04 280);
-  --muted-foreground: oklch(0.72 0.05 240);
-
-  --accent: oklch(0.82 0.16 200);
-  --accent-foreground: oklch(0.13 0.04 280);
-
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0 0);
-
-  --border: oklch(0.82 0.16 200 / 0.25);
-  --input: oklch(0.82 0.16 200 / 0.2);
-  --ring: oklch(0.68 0.27 5 / 0.6);
-
-  --neon-pink: oklch(0.68 0.27 5);
-  --neon-cyan: oklch(0.82 0.16 200);
-  --neon-soft: oklch(0.94 0.05 200);
-
-  --gradient-neon: linear-gradient(135deg, oklch(0.68 0.27 5), oklch(0.82 0.16 200));
-  --shadow-neon-pink: 0 0 24px oklch(0.68 0.27 5 / 0.55), 0 0 60px oklch(0.68 0.27 5 / 0.25);
-  --shadow-neon-cyan: 0 0 24px oklch(0.82 0.16 200 / 0.55), 0 0 60px oklch(0.82 0.16 200 / 0.25);
+  --background: oklch(0.17 0.03 262);
+  --surface: oklch(0.23 0.035 262 / 0.5);
+  --foreground: oklch(0.78 0.02 255);
+  --heading: oklch(0.95 0.01 255);
+  --muted: oklch(0.62 0.025 255);
+  --subtle: oklch(0.5 0.025 255);
+  --accent: oklch(0.83 0.14 78);
+  --accent-soft: oklch(0.83 0.14 78 / 0.12);
+  --line: oklch(0.95 0.01 255 / 0.1);
+  --spotlight: oklch(0.45 0.12 262 / 0.18);
 }
 
 @layer base {
-  * {
-    border-color: var(--color-border);
-  }
-
   html {
     color-scheme: dark;
-    image-rendering: pixelated;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-size: 18px;
-    background-image:
-      linear-gradient(oklch(0.82 0.16 200 / 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, oklch(0.82 0.16 200 / 0.06) 1px, transparent 1px),
-      radial-gradient(ellipse at top, oklch(0.68 0.27 5 / 0.15), transparent 60%);
-    background-size: 32px 32px, 32px 32px, 100% 100%;
-    background-attachment: fixed;
   }
 
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    letter-spacing: 0;
-    line-height: 1.3;
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-background);
   }
-
-  img {
-    image-rendering: pixelated;
-  }
-}
-
-@utility text-neon-pink {
-  color: var(--neon-pink);
-  text-shadow: 0 0 12px oklch(0.68 0.27 5 / 0.7);
-}
-
-@utility text-neon-cyan {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 12px oklch(0.82 0.16 200 / 0.7);
-}
-
-@utility text-gradient-neon {
-  background: var(--gradient-neon);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-}
-
-@utility glow-pink {
-  box-shadow: var(--shadow-neon-pink);
-}
-
-@utility glow-cyan {
-  box-shadow: var(--shadow-neon-cyan);
-}
-
-@utility bg-gradient-neon {
-  background: var(--gradient-neon);
-}
-
-@utility grid-bg {
-  background-image:
-    linear-gradient(oklch(0.82 0.16 200 / 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(0.82 0.16 200 / 0.08) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-@utility clip-cyber {
-  clip-path: polygon(
-    0 6px, 6px 6px, 6px 0,
-    calc(100% - 6px) 0, calc(100% - 6px) 6px, 100% 6px,
-    100% calc(100% - 6px), calc(100% - 6px) calc(100% - 6px), calc(100% - 6px) 100%,
-    6px 100%, 6px calc(100% - 6px), 0 calc(100% - 6px)
-  );
-}
-
-@utility pixel-border {
-  box-shadow:
-    0 -4px 0 0 var(--neon-cyan),
-    0 4px 0 0 var(--neon-cyan),
-    -4px 0 0 0 var(--neon-cyan),
-    4px 0 0 0 var(--neon-cyan);
-}
-
-@utility pixel-border-pink {
-  box-shadow:
-    0 -4px 0 0 var(--neon-pink),
-    0 4px 0 0 var(--neon-pink),
-    -4px 0 0 0 var(--neon-pink),
-    4px 0 0 0 var(--neon-pink);
-}
-
-@utility scanlines {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent 2px,
-      oklch(0 0 0 / 0.18) 3px,
-      transparent 4px
-    );
-    pointer-events: none;
-    mix-blend-mode: overlay;
-  }
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.55; }
-}
-
-@utility animate-flicker {
-  animation: flicker 4s infinite;
-}
-
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@utility animate-float {
-  animation: float-slow 6s ease-in-out infinite;
 }

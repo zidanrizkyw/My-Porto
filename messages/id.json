@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "title": "Zidan Rizky Wijaya — Frontend Developer",
+    "description": "Portofolio Zidan Rizky Wijaya, Frontend Developer yang membangun landing page, dashboard merchant, dan aplikasi web dengan Next.js dan SvelteKit."
+  },
+  "profile": {
+    "role": "Frontend Developer",
+    "tagline": "Saya membangun dashboard dan website yang rapi, cepat, dan mudah dirawat."
+  },
+  "nav": {
+    "label": "Navigasi halaman",
+    "about": "Tentang",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "credentials": "Pendidikan"
+  },
+  "language": {
+    "label": "Bahasa"
+  },
+  "social": {
+    "label": "Media sosial",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "about": {
+    "p1": "Saya Software Engineer dengan pengalaman di seluruh siklus pengembangan, mulai dari merancang arsitektur yang skalabel sampai membangun website responsif, dashboard, dan aplikasi full-stack. Saya terbiasa dengan <strong>clean architecture</strong>, integrasi API, sistem autentikasi, dan desain antarmuka.",
+    "p2": "Di <beyondtech>Beyondtech</beyondtech>, saya membangun landing page perusahaan, dashboard merchant untuk transaksi disbursement, dan dashboard admin internal, sambil bekerja erat dengan tim backend agar integrasi API berjalan mulus.",
+    "p3": "Sebelumnya saya membangun aplikasi web di pusat riset HUMIC Telkom University dan menjadi Implementation Support untuk produk cash management di Bank Mandiri. Saya senang menyelesaikan masalah nyata lewat teknologi dan terus belajar menjadi engineer yang lebih lengkap.",
+    "p4": "Saya terbuka untuk kesempatan belajar dan berkembang menjadi <strong>Full-stack Developer</strong>, memperdalam sisi backend, database, dan infrastruktur selain frontend."
+  },
+  "experience": {
+    "heading": "Pengalaman",
+    "present": "Sekarang",
+    "resume": "Lihat CV Lengkap",
+    "items": {
+      "beyondtech": {
+        "title": "Frontend Developer",
+        "description": "Membangun landing page responsif untuk Beyondtech dan Starvalas, dashboard merchant untuk klien eksternal, serta dashboard admin internal. Mengerjakan autentikasi, manajemen data, integrasi API, dan visualisasi data, sekaligus meningkatkan performa dan maintainability aplikasi."
+      },
+      "humic": {
+        "title": "Frontend Developer",
+        "description": "Merancang dan mengembangkan antarmuka web yang intuitif dan responsif dari desain UI/UX, mengintegrasikan RESTful API, serta mengimplementasikan autentikasi, otorisasi, dan fitur CRUD."
+      },
+      "mandiri": {
+        "title": "Implementation Support",
+        "description": "Mempresentasikan produk perbankan Kopra Cash Management kepada klien, memberikan pelatihan dan demo produk, serta mengolah data nasabah dengan Microsoft Excel."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Proyek",
+    "internal": "Hanya internal",
+    "screenshotAlt": "Tangkapan layar {title}",
+    "items": {
+      "jajanin": {
+        "title": "Jajanin",
+        "description": "Platform donasi dan tipping untuk kreator dan streamer. Saya membangun seluruh frontend dengan arsitektur MVVM: dashboard kreator, panel admin dengan alur approval penarikan dana, request signing RSA-SHA256 dan HMAC-SHA512 di layer BFF, refresh token otomatis, serta konfigurasi overlay OBS secara real-time.",
+        "overview": [
+          "Jajanin adalah platform donasi dan tipping untuk kreator konten dan streamer, mirip Saweria atau Trakteer. Penonton bisa mengirim dukungan lewat QRIS dan berbagai e-wallet, dan donasinya langsung muncul di siaran lewat overlay.",
+          "Saya membangun seluruh aplikasi frontend dengan arsitektur MVVM yang bersih: layer Repository, Remote Data Source, dan State yang reaktif. Dengan begitu logika bisnis terpisah dari tampilan dan mudah diuji."
+        ],
+        "highlights": [
+          "Dashboard kreator: laporan donasi real-time, account statement, manajemen penarikan dana, dan pengaturan profil.",
+          "Panel admin: manajemen kreator (aktivasi/suspend), laporan donasi seluruh platform, alur approval/rejection penarikan, dan proses settlement batch.",
+          "Request signing RSA-SHA256 (Auth Signature) dan HMAC-SHA512 (Service Signature) di layer BFF sesuai spesifikasi keamanan backend.",
+          "Manajemen sesi dengan refresh token otomatis berdasarkan aktivitas pengguna dan penanganan sesi kedaluwarsa.",
+          "Role-based access control (kreator vs admin) dengan route guard di sisi server dan redirect otomatis.",
+          "Konfigurasi overlay OBS real-time: alert donasi, media share, subathon timer, QR code, leaderboard, dan running text.",
+          "Library komponen reusable: tabel dengan pagination server-side, summary card, dan toast notification."
+        ],
+        "gallery": {
+          "hero": "Landing page: hero dengan contoh notifikasi saweran.",
+          "dashboard": "Dashboard kreator: saldo aktif, total donasi, riwayat dukungan terbaru, dan form cashout.",
+          "overlay": "Pengaturan overlay OBS: alert donasi, media share, subathon, QR code, milestone, leaderboard, dan running text, lengkap dengan text-to-speech.",
+          "donationReport": "Donation Report dengan ringkasan gross/net, filter status, pencarian, dan export CSV.",
+          "donatePage": "Halaman donasi publik kreator dengan pilihan nominal dan pesan untuk stream."
+        }
+      },
+      "merchant": {
+        "title": "Dashboard Merchant Beyondtech",
+        "description": "Dashboard web untuk merchant melakukan transaksi disbursement, memantau laporan, dan mengelola akun. Dibangun dengan SvelteKit menggunakan Clean Architecture dan prinsip OOP agar mudah dikembangkan.",
+        "overview": [
+          "Dashboard Merchant adalah aplikasi web untuk klien Beyondtech melakukan transaksi disbursement (pengiriman dana) ke banyak bank dan e-wallet, memantau laporan, dan mengelola akun bisnis mereka.",
+          "Aplikasi ini dibangun dengan SvelteKit menggunakan Clean Architecture dan prinsip Object-Oriented Programming, sehingga setiap layer (data, domain, presentasi) terpisah jelas dan mudah dikembangkan."
+        ],
+        "highlights": [
+          "Beranda dengan saldo tersedia, ringkasan traffic dan nilai transaksi, serta grafik top 10 bank/e-wallet.",
+          "Transfer single (input manual) dan multiple (upload dokumen) untuk mengirim dana ke banyak penerima sekaligus.",
+          "Laporan transfer dengan filter periode, metode pembayaran, status, pencarian, dan export tabel.",
+          "Account statement berisi riwayat transaksi lengkap dengan saldo sebelum dan sesudah transaksi.",
+          "Manajemen user dan role, log aktivitas, notifikasi, serta menu QRIS dan remittance."
+        ],
+        "gallery": {
+          "home": "Beranda: saldo, akses cepat transfer, dan ringkasan transaksi.",
+          "transfer": "Pilihan jenis transaksi: single (input manual) atau multiple (upload dokumen).",
+          "report": "Transfer Report dengan filter, pencarian, pagination, dan export tabel.",
+          "statement": "Account Statement dengan riwayat saldo per transaksi."
+        }
+      },
+      "internal": {
+        "title": "Dashboard Internal Beyondtech",
+        "description": "Dashboard admin internal untuk operasional perusahaan: manajemen akun merchant, pengaturan harga, rekonsiliasi, top up, dan log aktivitas. Dibangun dengan SvelteKit, Clean Architecture, dan OOP agar modular.",
+        "overview": [
+          "Dashboard Internal adalah aplikasi admin yang dipakai tim Beyondtech untuk menjalankan operasional harian: memantau saldo di setiap mitra, memverifikasi merchant, mengatur harga layanan, sampai menangani tiket bantuan.",
+          "Seperti Dashboard Merchant, aplikasi ini dibangun dengan SvelteKit, Clean Architecture, dan OOP agar modul-modulnya terpisah rapi dan mudah ditambah. Aplikasi ini hanya dapat diakses secara internal."
+        ],
+        "highlights": [
+          "Overview saldo di setiap bank dan mitra pembayaran, plus tab monitoring transaksi.",
+          "Account management: verifikasi KYC merchant, status request, dan laporan akun.",
+          "Pengaturan harga untuk layanan disbursement, payment gateway, QRIS, dan remittance.",
+          "Rekonsiliasi transaksi: data unreconciled, unmatched, dan laporan per mitra.",
+          "Approval top up dan refund top up saldo merchant.",
+          "Manajemen user dan role, log aktivitas internal/eksternal, helpdesk ticket, dan pengelolaan data pengguna mobile."
+        ],
+        "gallery": {
+          "overview": "Dashboard overview dengan saldo per mitra (disamarkan).",
+          "kyc": "Verifikasi KYC merchant dengan filter dan status review.",
+          "role": "Manajemen role dan hak akses pengguna internal.",
+          "helpdesk": "Helpdesk ticket dengan status, prioritas, dan penugasan tim."
+        }
+      },
+      "companyProfile": {
+        "title": "Company Profile Beyondtech",
+        "description": "Website company profile dua bahasa untuk menampilkan brand, layanan, dan produk Beyondtech, termasuk kalkulator kurs transfer internasional. Fokus pada UI yang bersih, responsif di mobile, dan navigasi yang mudah.",
+        "overview": [
+          "Website company profile Beyondtech menampilkan brand, layanan, dan produk perusahaan kepada calon pengguna, mulai dari transfer internasional sampai disbursement untuk bisnis.",
+          "Website dibangun dengan Next.js dan Tailwind CSS memakai pola MVVM (MobX + Inversify), dengan dukungan dua bahasa lewat next-intl. Fokusnya UI yang bersih, responsif di mobile, dan cepat dimuat."
+        ],
+        "highlights": [
+          "Dua bahasa (Indonesia dan Inggris) dengan URL per bahasa serta metadata SEO, canonical, dan hreflang.",
+          "Kalkulator kurs transfer internasional dengan pilihan negara dan mata uang tujuan.",
+          "Peta kantor dengan status buka/tutup yang dihitung berdasarkan zona waktu masing-masing kantor.",
+          "Halaman Tentang Kami, FAQ dengan pencarian, serta Berita dengan kategori dan halaman detail artikel.",
+          "Animasi saat scroll dan tata letak responsif dari mobile sampai desktop."
+        ],
+        "gallery": {
+          "home": "Beranda dengan kalkulator kurs transfer internasional.",
+          "about": "Halaman Tentang Kami.",
+          "faq": "Halaman FAQ dengan pencarian pertanyaan.",
+          "news": "Halaman Berita dengan artikel unggulan dan filter kategori."
+        }
+      },
+      "melanoma": {
+        "title": "Website Deteksi Melanoma",
+        "description": "Aplikasi web untuk deteksi dini kanker kulit (Melanoma dan BCC). Pengguna mengunggah foto lesi kulit, lalu model hybrid transfer learning (MobileNetV2, VGG16, DenseNet) dengan classifier SVM mengklasifikasikannya. Frontend React.js terhubung ke backend Flask.",
+        "overview": [
+          "Aplikasi web untuk membantu deteksi dini kanker kulit, yaitu Melanoma dan Basal Cell Carcinoma (BCC). Proyek ini dikerjakan di pusat riset HUMIC Engineering, Telkom University.",
+          "Saya mengerjakan frontend React.js yang terhubung ke backend Flask tempat model machine learning dijalankan."
+        ],
+        "highlights": [
+          "Pengguna mengunggah foto lesi kulit langsung dari browser.",
+          "Model hybrid transfer learning (MobileNetV2, VGG16, dan DenseNet) mengekstrak fitur gambar.",
+          "Classifier SVM mengelompokkan hasilnya menjadi Melanoma, BCC, atau kulit normal.",
+          "Frontend React.js terintegrasi dengan REST API dari backend Flask."
+        ],
+        "gallery": {}
+      }
+    },
+    "detail": {
+      "back": "Kembali",
+      "role": "Peran",
+      "period": "Periode",
+      "stack": "Teknologi",
+      "visit": "Kunjungi situs",
+      "overview": "Ringkasan",
+      "highlights": "Fitur Utama",
+      "gallery": "Tangkapan Layar",
+      "blurNote": "Data sensitif pada tangkapan layar ini sengaja disamarkan.",
+      "noGallery": "Belum ada tangkapan layar publik untuk proyek ini.",
+      "openImage": "Buka gambar ukuran penuh",
+      "others": "Proyek Lainnya",
+      "previous": "Sebelumnya",
+      "next": "Berikutnya",
+      "viewDetail": "Lihat detail proyek {title}"
+    }
+  },
+  "credentials": {
+    "heading": "Pendidikan & Sertifikasi",
+    "education": {
+      "school": "Telkom University",
+      "degree": "S1 Informatika · IPK 3,30/4,00"
+    },
+    "items": {
+      "mos": {
+        "title": "MOS Excel 2019 Associate",
+        "description": "Sertifikasi Microsoft Office Specialist untuk Excel 2019 tingkat Associate: pengolahan data, rumus, dan fungsi spreadsheet."
+      },
+      "lppi": {
+        "title": "Pelatihan Sistem Pembayaran — LPPI",
+        "description": "Pelatihan berbasis kompetensi bidang sistem pembayaran dan pengelolaan uang rupiah, kualifikasi Pelaksana 4, subbidang pengelolaan transfer dana lembaga selain bank."
+      }
+    }
+  },
+  "footer": {
+    "text": "Dibangun dengan <next>Next.js</next> dan <tailwind>Tailwind CSS</tailwind>."
+  },
+  "a11y": {
+    "skip": "Lewati ke konten",
+    "newTab": "(terbuka di tab baru)"
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "backHome": "Kembali ke Beranda"
+  }
+}

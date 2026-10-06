@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "title": "Zidan Rizky Wijaya — Frontend Developer",
+    "description": "Portfolio of Zidan Rizky Wijaya, a Frontend Developer building landing pages, merchant dashboards, and web apps with Next.js and SvelteKit."
+  },
+  "profile": {
+    "role": "Frontend Developer",
+    "tagline": "I build dashboards and websites that are clean, fast, and easy to maintain."
+  },
+  "nav": {
+    "label": "In-page navigation",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "credentials": "Education"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "social": {
+    "label": "Social media",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "about": {
+    "p1": "I'm a Software Engineer with hands-on experience across the development lifecycle, from designing scalable architectures to building responsive websites, dashboards, and full-stack applications. I work comfortably with <strong>clean architecture</strong>, API integration, authentication systems, and interface design.",
+    "p2": "At <beyondtech>Beyondtech</beyondtech>, I built the company landing pages, a merchant dashboard for disbursement transactions, and internal admin dashboards, working closely with backend engineers to keep API integrations smooth.",
+    "p3": "Before that, I built web applications at the HUMIC research center at Telkom University and worked as Implementation Support for a cash management product at Bank Mandiri. I enjoy solving real-world problems with technology and keep growing into a well-rounded engineer.",
+    "p4": "I'm open to opportunities to learn and grow into a <strong>Full-stack Developer</strong>, deepening my backend, database, and infrastructure skills alongside frontend."
+  },
+  "experience": {
+    "heading": "Experience",
+    "present": "Present",
+    "resume": "View Full Résumé",
+    "items": {
+      "beyondtech": {
+        "title": "Frontend Developer",
+        "description": "Built responsive landing pages for Beyondtech and Starvalas, merchant dashboards for external clients, and internal admin dashboards. Delivered authentication, data management, API integration, and data visualization while improving performance and maintainability."
+      },
+      "humic": {
+        "title": "Frontend Developer",
+        "description": "Designed and developed intuitive, responsive web interfaces from UI/UX designs, integrated RESTful APIs, and implemented authentication, authorization, and CRUD features."
+      },
+      "mandiri": {
+        "title": "Implementation Support",
+        "description": "Presented the Kopra Cash Management banking product to clients, ran client training and product demos, and processed customer data with Microsoft Excel."
+      }
+    }
+  },
+  "projects": {
+    "heading": "Projects",
+    "internal": "Internal only",
+    "screenshotAlt": "Screenshot of {title}",
+    "items": {
+      "jajanin": {
+        "title": "Jajanin",
+        "description": "A donation and tipping platform for creators and streamers. I built the entire frontend with an MVVM architecture: the creator dashboard, an admin panel with withdrawal approval workflows, RSA-SHA256 and HMAC-SHA512 request signing on the BFF layer, activity-based token refresh, and real-time OBS overlay configuration.",
+        "overview": [
+          "Jajanin is a donation and tipping platform for content creators and streamers, similar to Saweria or Trakteer. Viewers send support through QRIS and many e-wallets, and donations appear on stream through overlays.",
+          "I built the entire frontend client with a clean MVVM architecture: Repository, Remote Data Source, and reactive State layers, keeping business logic separate from the UI and easy to test."
+        ],
+        "highlights": [
+          "Creator dashboard: real-time donation reports, account statements, withdrawal management, and profile settings.",
+          "Admin panel: creator management (activate/suspend), platform-wide donation reports, withdrawal approval/rejection workflows, and settlement batch processing.",
+          "RSA-SHA256 (Auth Signature) and HMAC-SHA512 (Service Signature) request signing on the BFF layer, following the backend's security specification.",
+          "Session management with automatic token refresh based on user activity and session expiry handling.",
+          "Role-based access control (creator vs admin) with server-side route guards and automatic redirects.",
+          "Real-time OBS overlay configuration: donation alerts, media share, subathon timers, QR codes, leaderboards, and running text.",
+          "A reusable component library: server-side paginated tables, summary cards, and toast notifications."
+        ],
+        "gallery": {
+          "hero": "Landing page hero with a sample tip notification.",
+          "dashboard": "Creator dashboard: active balance, total donations, recent support history, and the cashout form.",
+          "overlay": "OBS overlay settings: donation alerts, media share, subathon, QR code, milestone, leaderboard, and running text, with text-to-speech.",
+          "donationReport": "Donation Report with gross/net summaries, status filters, search, and CSV export.",
+          "donatePage": "The creator's public donation page with amount presets and a message for the stream."
+        }
+      },
+      "merchant": {
+        "title": "Beyondtech Merchant Dashboard",
+        "description": "A web dashboard for merchants to run disbursement transactions, track reports, and manage their accounts. Built with SvelteKit using Clean Architecture and OOP principles so it scales and stays maintainable.",
+        "overview": [
+          "The Merchant Dashboard lets Beyondtech's clients run disbursement transactions to many banks and e-wallets, track reports, and manage their business accounts.",
+          "It is built with SvelteKit using Clean Architecture and Object-Oriented Programming, so each layer (data, domain, presentation) is clearly separated and easy to extend."
+        ],
+        "highlights": [
+          "A home page with available balance, transaction traffic and amount summaries, and a top 10 bank/e-wallet chart.",
+          "Single (manual input) and multiple (document upload) transfers to pay many recipients at once.",
+          "A transfer report with period, payment method, and status filters, search, and table export.",
+          "An account statement with full transaction history and balance before and after each transaction.",
+          "User and role management, activity logs, notifications, plus QRIS and remittance menus."
+        ],
+        "gallery": {
+          "home": "Home: balance, quick transfer actions, and a transaction summary.",
+          "transfer": "Choosing the transaction type: single (manual input) or multiple (document upload).",
+          "report": "Transfer Report with filters, search, pagination, and table export.",
+          "statement": "Account Statement with the balance history per transaction."
+        }
+      },
+      "internal": {
+        "title": "Beyondtech Internal Dashboard",
+        "description": "An internal admin dashboard for company operations: merchant account management, pricing settings, reconciliation, top-ups, and activity logs. Built with SvelteKit, Clean Architecture, and OOP for a modular system.",
+        "overview": [
+          "The Internal Dashboard is the admin app Beyondtech's team uses for daily operations: watching balances at each partner, verifying merchants, setting service prices, and handling support tickets.",
+          "Like the Merchant Dashboard, it is built with SvelteKit, Clean Architecture, and OOP so modules stay neatly separated and easy to add to. It is only accessible internally."
+        ],
+        "highlights": [
+          "A balance overview for each bank and payment partner, plus a transaction monitoring tab.",
+          "Account management: merchant KYC verification, status requests, and account reports.",
+          "Pricing settings for disbursement, payment gateway, QRIS, and remittance services.",
+          "Transaction reconciliation: unreconciled and unmatched data, and per-partner reports.",
+          "Approval of merchant balance top-ups and top-up refunds.",
+          "User and role management, internal/external activity logs, helpdesk tickets, and mobile user data management."
+        ],
+        "gallery": {
+          "overview": "Dashboard overview with per-partner balances (blurred).",
+          "kyc": "Merchant KYC verification with filters and review status.",
+          "role": "Role and permission management for internal users.",
+          "helpdesk": "Helpdesk tickets with status, priority, and team assignment."
+        }
+      },
+      "companyProfile": {
+        "title": "Beyondtech Company Profile",
+        "description": "A bilingual company profile site showcasing Beyondtech's brand, services, and products, including an international transfer rate calculator. Focused on clean UI, mobile responsiveness, and easy navigation.",
+        "overview": [
+          "Beyondtech's company profile site presents the brand, services, and products to prospective users, from international transfers to disbursement for businesses.",
+          "It is built with Next.js and Tailwind CSS using an MVVM pattern (MobX + Inversify), with bilingual support through next-intl. The focus is a clean UI, mobile responsiveness, and fast loading."
+        ],
+        "highlights": [
+          "Two languages (Indonesian and English) with per-language URLs plus SEO metadata, canonical, and hreflang tags.",
+          "An international transfer rate calculator with destination country and currency selection.",
+          "An office map with open/closed status computed from each office's time zone.",
+          "About Us, a searchable FAQ, and a News section with categories and article pages.",
+          "Scroll animations and a responsive layout from mobile to desktop."
+        ],
+        "gallery": {
+          "home": "Home page with the international transfer rate calculator.",
+          "about": "About Us page.",
+          "faq": "FAQ page with question search.",
+          "news": "News page with a featured article and category filters."
+        }
+      },
+      "melanoma": {
+        "title": "Melanoma Skin Detection",
+        "description": "A web app for early detection of skin cancer (Melanoma and BCC). Users upload a skin lesion photo and hybrid transfer learning models (MobileNetV2, VGG16, DenseNet) with an SVM classifier label it. A React.js frontend talks to a Flask backend.",
+        "overview": [
+          "A web app that helps with early detection of skin cancer, namely Melanoma and Basal Cell Carcinoma (BCC). The project was built at the HUMIC Engineering research center, Telkom University.",
+          "I built the React.js frontend that talks to a Flask backend running the machine learning models."
+        ],
+        "highlights": [
+          "Users upload a skin lesion photo straight from the browser.",
+          "Hybrid transfer learning models (MobileNetV2, VGG16, and DenseNet) extract image features.",
+          "An SVM classifier labels the result as Melanoma, BCC, or normal skin.",
+          "The React.js frontend integrates with the Flask backend's REST API."
+        ],
+        "gallery": {}
+      }
+    },
+    "detail": {
+      "back": "Back",
+      "role": "Role",
+      "period": "Period",
+      "stack": "Tech stack",
+      "visit": "Visit site",
+      "overview": "Overview",
+      "highlights": "Key Features",
+      "gallery": "Screenshots",
+      "blurNote": "Sensitive data in these screenshots has been blurred on purpose.",
+      "noGallery": "There are no public screenshots for this project yet.",
+      "openImage": "Open full-size image",
+      "others": "More Projects",
+      "previous": "Previous",
+      "next": "Next",
+      "viewDetail": "View project details for {title}"
+    }
+  },
+  "credentials": {
+    "heading": "Education & Certifications",
+    "education": {
+      "school": "Telkom University",
+      "degree": "B.S. Informatics · GPA 3.30/4.00"
+    },
+    "items": {
+      "mos": {
+        "title": "MOS Excel 2019 Associate",
+        "description": "Microsoft Office Specialist certification for Excel 2019 at the Associate level: data processing, formulas, and spreadsheet functions."
+      },
+      "lppi": {
+        "title": "Payment System Training — LPPI",
+        "description": "Competency-based training in payment systems and rupiah currency management, Pelaksana 4 qualification, in fund transfer management for non-bank institutions."
+      }
+    }
+  },
+  "footer": {
+    "text": "Built with <next>Next.js</next> and <tailwind>Tailwind CSS</tailwind>."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "newTab": "(opens in a new tab)"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  }
+}
